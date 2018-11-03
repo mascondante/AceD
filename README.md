@@ -47,9 +47,9 @@ GLPM-cli mnsync status
 Also, if you want to check/start/stop **GLPM** , run one of the following commands as **root**:
 ```
 systemctl status GLPM #To check the service is running.
-systemctl start GLPM #To start AceD service.
-systemctl stop GLPM #To stop AceD service.
-systemctl is-enabled GLPM #To check whetether AceD service is enabled on boot or not.
+systemctl start GLPM #To start GLPM service.
+systemctl stop GLPM #To stop GLPM service.
+systemctl is-enabled GLPM #To check whetether GLPM service is enabled on boot or not.
 ```
 ***
 
