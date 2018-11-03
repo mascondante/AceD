@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='GLPM2.conf'
-CONFIGFOLDER='/root/.GLPMcore'
+CONFIGFOLDER='/root/.GLPM2'
 COIN_DAEMON='/usr/local/bin/GLPMd'
 COIN_CLI='/usr/local/bin/GLPM-cli'
 COIN_REPO='https://github.com/GLPMCORE/GLPM/releases/download/v1.0/v13-glpm.tar.gz'
@@ -23,21 +23,21 @@ function update_sentinel() {
 
 function update_node() {
   echo -e "Preparing to download updated $COIN_NAME"
-  rm /usr/local/bin/aced*
-  rm -r ~/.acedcore/blocks/ ~/.acedcore/chainstate/ ~/.acedcore/peers.dat
+  rm /usr/local/bin/GLPM*
+  rm -r ~/.GLPM2/blocks/ ~/.GLPM2/chainstate/ ~/.GLPM2/peers.dat
   cd $TMP_FOLDER
   wget -q $COIN_REPO
   compile_error
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
   tar xvf $COIN_ZIP --strip 1 >/dev/null 2>&1
   compile_error
-  cp aced{d,-cli} /usr/local/bin
+  cp GLPM{d,-cli} /usr/local/bin
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
-  chmod +x /usr/local/bin/acedd
-  chmod +x /usr/local/bin/aced-cli
+  chmod +x /usr/local/bin/GLPMd
+  chmod +x /usr/local/bin/GLPM-cli
   clear
 }
 
@@ -83,20 +83,20 @@ bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev libzmq3-dev ufw fail2ba
 fi
 systemctl stop $COIN_NAME.service
 sleep 3
-pkill -9 acedd
+pkill -9 GLPMd
 clear
 }
 
 function import_bootstrap() {
-  rm -r ~/.acedcore/blocks ~/.acedcore/chainstate ~/.acedcore/peers.dat
+  rm -r ~/.GLPM/blocks ~/.GLPM2/chainstate ~/.GLPM/peers.dat
   wget -q $COIN_BS
   compile_error
   COIN_ZIP=$(echo $COIN_BS | awk -F'/' '{print $NF}')
   tar -xvf $COIN_ZIP >/dev/null 2>&1
   compile_error
-  cp -r ~/bootstrap/blocks ~/.acedcore/blocks
-  cp -r ~/bootstrap/chainstate ~/.acedcore/chainstate
-  #cp -r ~/bootstrap/peers.dat ~/.acedcore/peers.dat
+  cp -r ~/bootstrap/blocks ~/.GLPM/blocks
+  cp -r ~/bootstrap/chainstate ~/.GLPM/chainstate
+  #cp -r ~/bootstrap/peers.dat ~/.GLPM/peers.dat
   rm -r ~/bootstrap/
   rm $COIN_ZIP
   echo -e "Sync is complete"
@@ -105,9 +105,9 @@ function import_bootstrap() {
 function update_config() {
   sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
-addnode=144.202.78.48:24126
-addnode=107.191.44.191:24126
-addnode=207.148.30.55:24126
+addnode=35.192.210.103:31999
+addnode=35.224.98.27:31999
+addnode=35.237.200.116:31999
 EOF
 }
 
