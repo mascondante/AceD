@@ -7,7 +7,7 @@ This script will install **GLPM v1.0**.
 ## Installation:
 Log into the server using ssh (Putty for windows or terminal for Mac users) and run the following commands:
 ```
-wget -q https://raw.githubusercontent.com/mascondante/AceD/master/glpm_install.sh
+wget -q https://raw.githubusercontent.com/mascondante/GLPM/master/glpm_install.sh
 bash glpm_install.sh
 ```
 ***
@@ -57,7 +57,7 @@ systemctl is-enabled GLPM #To check whetether AceD service is enabled on boot or
 The first line (rm glpm_update.sh) is not required the very first time you update the node and will return an error if you run it.  This is fine, continue with the update script.
 ```
 rm glpm_update.sh*
-wget -q https://raw.githubusercontent.com/mascondante/AceD/master/glpm_update.sh
+wget -q https://raw.githubusercontent.com/mascondante/GLPM/master/glpm_update.sh
 bash glpm_update.sh
 ```
 ***
