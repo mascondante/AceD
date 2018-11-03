@@ -2,12 +2,12 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='glpn.conf'
-CONFIGFOLDER='/root/.glpncore'
-COIN_DAEMON='/usr/local/bin/glpnd'
-COIN_CLI='/usr/local/bin/glpn-cli'
+CONFIGFOLDER='/root/.GLPMcore'
+COIN_DAEMON='/usr/local/bin/GLPMd'
+COIN_CLI='/usr/local/bin/GLPM-cli'
 COIN_REPO='https://github.com/GLPMCORE/GLPM/releases/download/v1.0/v13-glpm.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
-COIN_NAME='GLPN'
+COIN_NAME='GLPM'
 COIN_PORT=31999
 #COIN_BS='bootstrap.tar.gz'
 
