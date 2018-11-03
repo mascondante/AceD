@@ -7,8 +7,8 @@ This script will install **GLPM v1.0**.
 ## Installation:
 Log into the server using ssh (Putty for windows or terminal for Mac users) and run the following commands:
 ```
-wget -q https://raw.githubusercontent.com/mascondante/AceD/master/aced_install.sh
-bash aced_install.sh
+wget -q https://raw.githubusercontent.com/mascondante/AceD/master/glpm_install.sh
+bash glpm_install.sh
 ```
 ***
 
@@ -40,9 +40,9 @@ Alias Address Privkey TxHash Output_index
 
 ## Usage:
 ```
-glpm-cli getinfo
-glpm-cli masternode status
-glpm-cli mnsync status
+GLPM-cli getinfo
+GLPM-cli masternode status
+GLPM-cli mnsync status
 ```
 Also, if you want to check/start/stop **GLPM** , run one of the following commands as **root**:
 ```
@@ -54,18 +54,18 @@ systemctl is-enabled GLPM #To check whetether AceD service is enabled on boot or
 ***
 
 ## Updating GLPM
-The first line (rm aced_update.sh) is not required the very first time you update the node and will return an error if you run it.  This is fine, continue with the update script.
+The first line (rm glpm_update.sh) is not required the very first time you update the node and will return an error if you run it.  This is fine, continue with the update script.
 ```
-rm aced_update.sh*
-wget -q https://raw.githubusercontent.com/mascondante/AceD/master/aced_update.sh
-bash aced_update.sh
+rm glpm_update.sh*
+wget -q https://raw.githubusercontent.com/mascondante/AceD/master/glpm_update.sh
+bash glpm_update.sh
 ```
 ***
 
 ## Sentinel (IGNORE: This is not yet required!)
 
 **Sentinel** is installed in **/sentinel** and added to **crontab** file.  
-Sentinel log file is **/root/.acedcore/sentinel.log**  
+Sentinel log file is **/root/.GLPM2/sentinel.log**  
 Test the config by running the following commands:
 ```
 cd /sentinel
@@ -76,7 +76,7 @@ SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
 
 ## Donations:  
 
-Any donation is highly appreciated.  Donation addresses have not changed. CryptoSharks will receive the donation as this script has only been adapted for GLPM.
+Any donation is highly appreciated.  Donation addresses have not changed. CryptoSharks will receive the donation as he created the scripts. This is simply a GLPM adaptation.
 
 **AceD**: AUxZpb1BpczT4pzfN7fYh6HxKEvwPL2SxK  
 **BTC**: 1FJvtLBszQgY2eKBawov48RwSYy2yqEvn1  
