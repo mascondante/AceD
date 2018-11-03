@@ -1,8 +1,8 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='glpn.conf'
-CONFIGFOLDER='/root/.GLPMcore'
+CONFIG_FILE='GLPM2.conf'
+CONFIGFOLDER='/root/.GLPM2'
 COIN_DAEMON='/usr/local/bin/GLPMd'
 COIN_CLI='/usr/local/bin/GLPM-cli'
 COIN_REPO='https://github.com/GLPMCORE/GLPM/releases/download/v1.0/v13-glpm.tar.gz'
@@ -140,9 +140,9 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=144.202.78.48:24126
-addnode=107.191.44.191:24126
-addnode=207.148.30.55:24126
+addnode=35.192.210.103:31999
+addnode=35.224.98.27:31999
+addnode=35.237.200.116:31999
 EOF
 }
 
