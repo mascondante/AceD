@@ -1,14 +1,14 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='aced.conf'
-CONFIGFOLDER='/root/.acedcore'
-COIN_DAEMON='/usr/local/bin/acedd'
-COIN_CLI='/usr/local/bin/aced-cli'
-COIN_REPO='http://35.202.200.196/v11_aced_mnfix.tar.gz'
+CONFIG_FILE='glpn.conf'
+CONFIGFOLDER='/root/.glpncore'
+COIN_DAEMON='/usr/local/bin/glpnd'
+COIN_CLI='/usr/local/bin/glpn-cli'
+COIN_REPO='https://github.com/GLPMCORE/GLPM/releases/download/v1.0/v13-glpm.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
-COIN_NAME='AceD'
-COIN_PORT=24126
+COIN_NAME='GLPN'
+COIN_PORT=31999
 #COIN_BS='bootstrap.tar.gz'
 
 
