@@ -1,4 +1,4 @@
-# AceD
+# GLPM
 Shell script to install a [GLPM Masternode](http://glacierplatform.io/) on a Linux server running Ubuntu 16.04.  
 This will require a VPS, CryptoSharks (creator of the original script) uses [Vultr](https://www.vultr.com/?ref=7310394).  The $5/mo server size will suffice.  
 This script will install **GLPM v1.0**.
