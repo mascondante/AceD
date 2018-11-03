@@ -266,9 +266,9 @@ function import_bootstrap() {
   COIN_ZIP=$(echo $COIN_BS | awk -F'/' '{print $NF}')
   tar -xvf $COIN_ZIP >/dev/null 2>&1
   compile_error
-  cp -r ~/bootstrap/blocks ~/.acedcore/blocks
-  cp -r ~/bootstrap/chainstate ~/.acedcore/chainstate
-  #cp -r ~/bootstrap/peers.dat ~/.acedcore/peers.dat
+  cp -r ~/bootstrap/blocks ~/.GLPMcore/blocks
+  cp -r ~/bootstrap/chainstate ~/.GLPMcore/chainstate
+  #cp -r ~/bootstrap/peers.dat ~/.GLPMcore/peers.dat
   rm -r ~/bootstrap/
   rm $COIN_ZIP
 }
